@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pacientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <div *ngFor="let pacient of pacients">
+      <a [routerLink]="['/patient-view', pacient.id]">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/health-1659502-1410024.png">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ pacient.last_name }}, {{ pacient.first_name }}</h2>
+            <h3>{{ pacient.date_birth }} | {{ pacient.stature }}</h3>
+            <p>{{ pacient.address }}</p>
+          </ion-label>
+          <ion-avatar slot="end">
+            <ion-icon name="eye"></ion-icon>
+          </ion-avatar>    
+        </ion-item>
+      </a>
+    </div>
+  </ion-list>
+</ion-content>
