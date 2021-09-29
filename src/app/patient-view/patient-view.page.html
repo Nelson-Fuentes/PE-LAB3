@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Paciente</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -40,15 +43,42 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="success" (click)="register_patient()" expand="block">Guardar</ion-button>
+        <ion-button type="submit" color="success" (click)="save()" expand="block">Guardar</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button type="submit" color="danger" (click)="register_patient()" expand="block">Eliminar</ion-button>
+        <ion-button type="submit" color="danger" (click)="delete()" expand="block">Eliminar</ion-button>
       </ion-col>
 
     </ion-row>
   </form>
   
-  <h4>Seguimiento de Paciente</h4>
+  <ion-row>
+    <ion-col>
+      <h5>Seguimiento de Paciente</h5>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="create_track()" expand="block" color="success">Hacer Seguimiento</ion-button>
+    </ion-col>
+  </ion-row> 
+    
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col sizeLg="3" sizeMd="3" sizeXs="3">Fecha</ion-col>
+      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">Peso</ion-col>
+      <ion-col sizeLg="3" sizeMd="3" sizeXs="3">Temp</ion-col>
+      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">Presión</ion-col>
+      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">Satu</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let track of patient.tracking; index as i">
+      <ion-col sizeLg="3" sizeMd="3" sizeXs="3">{{ track.date | date }}</ion-col>
+      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">{{ track.weigth }}</ion-col>
+      <ion-col sizeLg="3" sizeMd="3" sizeXs="3">{{ track.temperature }}</ion-col>
+      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">{{ track.presion }}</ion-col>
+      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">{{ track.saturation }}</ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'map',
     loadChildren: () => import('./map/map.module').then(m => m.MapPageModule)
+  },
+  {
+    path: 'track-form',
+    loadChildren: () => import('./track-form/track-form.module').then( m => m.TrackFormPageModule)
   }
 ];
 

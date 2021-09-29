@@ -1,0 +1,30 @@
+ion-grid {
+    --ion-grid-column-padding: 10px;
+    border-collapse: collapse;
+    border-style: hidden;
+    font-size: 15px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+
+    ion-row:first-child {
+      background-color:  #FF1744;
+      font-weight: bold;
+      color: white;
+    }
+    ion-col {
+      border-bottom: 1px solid #DEDEDE;
+      border-right: 0;
+      padding: 1px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+    }
+    ion-col:last-child {
+      border-right: 1px solid black;
+    }
+    
+    ion-row:last-child {
+      border-bottom: 1px solid black;
+    }
+  }

@@ -1,3 +1,5 @@
+import { Tracking } from "./Tracking";
+
 export class Pacient{
 
     constructor(
@@ -8,6 +10,7 @@ export class Pacient{
         public address: string,
         public latitude: number,
         public longitude: number,
-        public id?: number
+        public id?: number,
+        public tracking?: Tracking[]
     ){}
 }
