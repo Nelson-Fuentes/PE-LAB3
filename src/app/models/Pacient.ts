@@ -7,7 +7,7 @@ export class Pacient{
         public stature: number,
         public address: string,
         public latitude: number,
-        public altitude: number,
+        public longitude: number,
         public id?: number
     ){}
 }

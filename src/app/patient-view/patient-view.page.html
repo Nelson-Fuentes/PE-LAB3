@@ -8,25 +8,35 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Apellidos</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input [(ngModel)]="patient.last_name" name="last_name" type="text" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input type="email" required></ion-input>
+      <ion-input [(ngModel)]="patient.first_name" name="first_name" type="email" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Fecha Nacimiento</ion-label>
-      <ion-input type="date" required></ion-input>
+      <ion-input [(ngModel)]="patient.date_birth" name="date_birth" type="date" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Estatura</ion-label>
-      <ion-input type="number" required></ion-input>
+      <ion-input [(ngModel)]="patient.stature" name="stature" type="number" required></ion-input>
     </ion-item>
 
-    <ion-button (click)="goToNextPage()">Go to Map</ion-button>
+    <ion-item lines="full">
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input [(ngModel)]="patient.address" name="address" type="text" required></ion-input>
+    </ion-item>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button  expand="block" (click)="goToNextPage()">Ver el Mapa</ion-button>
+      </ion-col>
+    </ion-row>
 
     <ion-row>
       <ion-col>
@@ -39,6 +49,6 @@
     </ion-row>
   </form>
   
-  <h1>Esta vista continuara</h1>
+  <h4>Seguimiento de Paciente</h4>
 
 </ion-content>

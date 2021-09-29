@@ -21,8 +21,8 @@ export class PatientViewPage implements OnInit {
   goToNextPage(){
     let marker=[{
       title: `Casa de Pedro`,
-      latitude:-16.398067,
-      longitude:-71.536390
+      latitude: this.patient.latitude,
+      longitude: this.patient.longitude
     }/*,{
       title: "Casa de Pepe",
       latitude:-16.400067,
