@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pacient } from '../models/Pacient';
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-patient-view',
@@ -12,9 +13,28 @@ export class PatientViewPage implements OnInit {
     'Summers', 'Scott', '1963-09-01', 1.8, 'Wetchester', 39.8755,-75.6710, 0
   )
     
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  goToNextPage(){
+    let marker=[{
+      title: `Casa de Pedro`,
+      latitude:-16.398067,
+      longitude:-71.536390
+    }/*,{
+      title: "Casa de Pepe",
+      latitude:-16.400067,
+      longitude:-71.538390
+    }*/
+  ];
+
+    this.navCtrl.navigateForward(['map',
+    {
+      data: JSON.stringify(marker)
+    }
+  ]);
   }
 
 }

@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'patient-view/:id',
     loadChildren: () => import('./patient-view/patient-view.module').then( m => m.PatientViewPageModule)
+  },
+  {
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then(m => m.MapPageModule)
   }
 ];
 
