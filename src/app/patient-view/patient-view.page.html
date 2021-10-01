@@ -70,10 +70,10 @@
       <ion-col sizeLg="2" sizeMd="2" sizeXs="2">Peso</ion-col>
       <ion-col sizeLg="3" sizeMd="3" sizeXs="3">Temp</ion-col>
       <ion-col sizeLg="2" sizeMd="2" sizeXs="2">Presión</ion-col>
-      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">Satu</ion-col>
+      <ion-col sizeLg="2" sizeMd="2" sizeXs="2">Saturacion</ion-col>
     </ion-row>
-    <ion-row *ngFor="let track of patient.tracking; index as i">
-      <ion-col sizeLg="3" sizeMd="3" sizeXs="3">{{ track.date | date }}</ion-col>
+    <ion-row *ngFor="let track of track_aux; index as i">
+      <ion-col sizeLg="3" sizeMd="3" sizeXs="3">{{ track.date.toDate() | date:'yyyy/MM/dd h:mm:ss a'}}</ion-col>
       <ion-col sizeLg="2" sizeMd="2" sizeXs="2">{{ track.weigth }}</ion-col>
       <ion-col sizeLg="3" sizeMd="3" sizeXs="3">{{ track.temperature }}</ion-col>
       <ion-col sizeLg="2" sizeMd="2" sizeXs="2">{{ track.presion }}</ion-col>

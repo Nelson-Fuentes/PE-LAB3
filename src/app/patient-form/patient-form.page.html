@@ -5,36 +5,46 @@
 </ion-header>
 
 <ion-content>
-  <form>
+ 
     <ion-item lines="full">
       <ion-label position="floating">Apellidos</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text"  [(ngModel)] = "pacient.last_name" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input type="email" required></ion-input>
+      <ion-input type="email"   [(ngModel)] = "pacient.first_name"  required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Fecha Nacimiento</ion-label>
-      <ion-input type="date" required></ion-input>
+      <ion-input type="date"  [(ngModel)] = "pacient.date_birth"  required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Estatura</ion-label>
-      <ion-input type="number" required></ion-input>
+      <ion-input type="number"  [(ngModel)] = "pacient.stature"  required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Dirección</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text"  [(ngModel)] = "pacient.address"  required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Latitud</ion-label>
+      <ion-input type="number"  [(ngModel)] = "pacient.latitude  "  required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Longitud</ion-label>
+      <ion-input type="number"  [(ngModel)] = "pacient.longitude"  required></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="success" (click)="register_patient()" expand="block">Guardar</ion-button>
+        <ion-button type="submit" color="success" (click)="register_patient(pa)" expand="block">Guardar</ion-button>
       </ion-col>
     </ion-row>
-  </form>
+
 </ion-content>

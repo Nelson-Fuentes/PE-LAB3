@@ -5,6 +5,6 @@ export class Tracking{
         public temperature: number,
         public presion: number,
         public saturation: number,
-        public id?: number
+        public id?: string
     ){}
 }

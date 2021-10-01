@@ -8,25 +8,25 @@
 </ion-header>
 
 <ion-content>
-  <form>
+
     <ion-item lines="full">
       <ion-label position="floating">Peso</ion-label>
-      <ion-input type="number" required></ion-input>
+      <ion-input type="number"  [(ngModel)] = "track.weigth" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">temperatura</ion-label>
-      <ion-input type="number" required></ion-input>
+      <ion-input type="number"  [(ngModel)] = "track.temperature" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Presión</ion-label>
-      <ion-input type="number" required></ion-input>
+      <ion-input type="number" [(ngModel)] = "track.presion" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Saturación</ion-label>
-      <ion-input type="number" required></ion-input>
+      <ion-input type="number" [(ngModel)] = "track.saturacion" required></ion-input>
     </ion-item>
 
     <ion-row>
@@ -34,5 +34,5 @@
         <ion-button type="submit" color="success" (click)="save()" expand="block">Guardar</ion-button>
       </ion-col>
     </ion-row>
-  </form>
+
 </ion-content>
